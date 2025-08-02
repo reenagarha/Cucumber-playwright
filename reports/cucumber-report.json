@@ -1,0 +1,260 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "purchase-products-from-sauce-demo;log-in-and-complete-purchase-of-two-products",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Log in and complete purchase of two products",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1167125800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the Sauce Demo site",
+            "match": {
+              "location": "features\\step_definitions\\PurchaseItems.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 639914899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I log in with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\PurchaseItems.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 311631300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I sort the products by price high to low",
+            "match": {
+              "location": "features\\step_definitions\\PurchaseItems.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34155799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I add the cheapest and second most expensive products to the cart",
+            "match": {
+              "location": "features\\step_definitions\\PurchaseItems.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 164489000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I go to the cart",
+            "match": {
+              "location": "features\\step_definitions\\PurchaseItems.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65294200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I proceed to checkout",
+            "match": {
+              "location": "features\\step_definitions\\PurchaseItems.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60129899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I fill in my information",
+            "match": {
+              "location": "features\\step_definitions\\PurchaseItems.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120372700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I complete the purchase",
+            "match": {
+              "location": "features\\step_definitions\\PurchaseItems.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45941399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see a confirmation message",
+            "match": {
+              "location": "features\\step_definitions\\PurchaseItems.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7158000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 544413599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "purchase-products-from-sauce-demo",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Purchase products from Sauce Demo",
+    "tags": [],
+    "uri": "features\\PurchaseItems.feature"
+  },
+  {
+    "description": "    As a user \n    I want to login to my account \n    so that I can access product catalog",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;successful-login",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Successful login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 636280299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to the Saucelab page",
+            "match": {
+              "location": "features\\step_definitions\\login-steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1275792400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I validate the title of the page",
+            "match": {
+              "location": "features\\step_definitions\\login-steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16581700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I enter username",
+            "match": {
+              "location": "features\\step_definitions\\login-steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82869099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter password",
+            "match": {
+              "location": "features\\step_definitions\\login-steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40270099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on login button",
+            "match": {
+              "location": "features\\step_definitions\\login-steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 576293400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 306793700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]

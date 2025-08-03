@@ -14,9 +14,11 @@ export class LoginPage {
     this.passwordForLogin = page.getByPlaceholder("Password");
     this.loginButton = page.getByRole("button", { name: "Login" });
   }
+  // Navigating to base url
   async goto() {
     await this.page.goto(`${config.baseURL}/`);
   }
+  // user logging in with given username and password
   async login(username: string, password: string) {
     await this.userName.fill(username);
     await this.passwordForLogin.fill(password);

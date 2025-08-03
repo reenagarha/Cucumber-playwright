@@ -1,5 +1,5 @@
 import { Before, After, BeforeAll,AfterAll,Status} from '@cucumber/cucumber';
-import {page, browser} from '../step_definitions/login-steps'
+
 import fs from 'fs';
 import path from 'path';
 import { CustomWorld } from '../support/world'

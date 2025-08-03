@@ -1,35 +1,26 @@
-import { Given, When, Then } from '@cucumber/cucumber';
-import { Browser, Page, chromium } from 'playwright';
+import { Given, When, Then, After } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
-import testdata from '../fixtures/testdata.json';
+import { CustomWorld } from '../support/world';
 
-export let loginpage: LoginPage;
-export let browser: Browser;
-export let page: Page;
-
-Given('I navigate to the Saucelab page', async () => {
-  browser = await chromium.launch({ headless: false });
-  page = await browser.newPage();
-  await page.goto('https://www.saucedemo.com');
-  loginpage = new LoginPage(page); 
+Given('I navigate to the Saucedemo page', async function (this: CustomWorld) {
+  const loginPage = new LoginPage(this.page);
+  await loginPage.goto();
 });
 
-When('I validate the title of the page', async () => {
-  const title = await page.title();
-  console.log(title);
+When('I enter valid username {string} and password {string}', 
+  async function (this: CustomWorld, username: string, password: string) {
+    const loginPage = new LoginPage(this.page);
+    await loginPage.login(username, password);
 });
 
-Then('I enter username', async () => {
-  await loginpage.userName.fill(testdata.username);
+Then('I am logged in successfully', async function (this: CustomWorld) {
+
+  
+  await expect(this.page).toHaveURL(/.*inventory/);
 });
 
-Then('I enter password', async () => {
-  await loginpage.passwordForLogin.fill(testdata.password);
-});
-
-Then('I click on login button', async () => {
-  await loginpage.loginButton.click();
-  await page.close();
-  await browser.close();
+// Close the browser after each scenario
+After(async function(this: CustomWorld) {
+  await this.closeBrowser();
 });

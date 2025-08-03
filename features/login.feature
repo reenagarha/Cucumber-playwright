@@ -1,10 +1,16 @@
-Feature: login
-    As a user 
-    I want to login to my account 
-    so that I can access product catalog
-Scenario: Successful login
-Given I navigate to the Saucelab page
-When I validate the title of the page
-Then I enter username
-And I enter password
-And I click on login button
+Feature: Login
+  As a user 
+  I want to login to Saucedemo website 
+  so that I can access the product catalog
+
+  Scenario Outline: Successful login
+    Given I navigate to the Saucedemo page
+    When I enter valid username "<username>" and password "<password>"
+    Then I am logged in successfully
+
+    Examples:
+      | username                | password       |
+      | standard_user           | secret_sauce   |
+      | problem_user            | secret_sauce   |
+      | performance_glitch_user | secret_sauce   |
+

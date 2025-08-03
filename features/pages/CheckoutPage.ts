@@ -1,16 +1,31 @@
-import { Page } from '@playwright/test';
+import { type Locator, type Page } from 'playwright';
 
 export class CheckoutPage {
-  constructor(private page: Page) {}
+  readonly page: Page;
+  readonly firstName: Locator;
+  readonly lastName: Locator;
+  readonly zip: Locator;
+  readonly continueButton: Locator;
+  readonly finishButton: Locator
+  
+  
+  constructor(page: Page) {
+    this.page = page;
+    this.firstName = page.getByPlaceholder("First Name");
+    this.lastName = page.getByPlaceholder("Last Name");
+    this.zip = page.getByPlaceholder("Zip/Postal Code");
+    this.continueButton = page.locator('#continue')
+    this.finishButton = page.locator('#finish')
+  }
 
   async fillCustomerInfo(firstName: string, lastName: string, zip: string) {
-    await this.page.fill('#first-name', firstName);
-    await this.page.fill('#last-name', lastName);
-    await this.page.fill('#postal-code', zip);
-    await this.page.click('#continue');
+    await this.firstName.fill(firstName);
+    await this.lastName.fill(lastName);
+    await this.zip.fill(zip);
+    await this.continueButton.click()
   }
 
   async completePurchase() {
-    await this.page.click('#finish');
+    await this.finishButton.click();
   }
 }

@@ -1,5 +1,4 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import testdata from '../fixtures/testdata.json';
 import { LoginPage } from '../pages/LoginPage';
 import { ProductsPage } from '../pages/ProductsPage';
 import { CartPage } from '../pages/CartPage';
@@ -12,9 +11,10 @@ Given('I open the Sauce Demo site', async function (this: CustomWorld) {
   await loginPage.goto();
 });
 
-When('I log in with valid credentials', async function (this: CustomWorld) {
-  const loginPage = new LoginPage(this.page);
-  await loginPage.login(testdata.username, testdata.password);
+When('I login with username {string} and password {string}', 
+  async function (this: CustomWorld, username: string, password: string) {
+    const loginPage = new LoginPage(this.page);
+    await loginPage.login(username, password);
 });
 
 When('I sort the products by price high to low', async function (this: CustomWorld) {
@@ -37,9 +37,10 @@ When('I proceed to checkout', async function (this: CustomWorld) {
   await cartPage.proceedToCheckout();
 });
 
-When('I fill in my information', async function (this: CustomWorld) {
+When('I fill in my information with first name {string}, last name {string} and zip {string}',
+  async function (this: CustomWorld, firstName:string, lastName:string, zipCode:string) {
   const checkoutPage = new CheckoutPage(this.page);
-  await checkoutPage.fillCustomerInfo(testdata.firstName, testdata.lastName, testdata.postalCode);
+  await checkoutPage.fillCustomerInfo(firstName, lastName, zipCode);
 });
 
 When('I complete the purchase', async function (this: CustomWorld) {
@@ -51,3 +52,7 @@ Then('I should see a confirmation message', async function (this: CustomWorld) {
   const confirmationPage = new ConfirmationPage(this.page);
   await confirmationPage.verifyConfirmation();
 });
+
+When('I fill in my information with first name {string},last name {string} and zip\&#x2F;postal code {string}', (s: string, s2: string, s3: string) => {
+  // Write code here that turns the phrase above into concrete actions
+})

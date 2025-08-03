@@ -1,10 +1,15 @@
-import { Page, expect } from '@playwright/test';
+import { type Page, type Locator,expect } from '@playwright/test';
 
 export class ConfirmationPage {
-  constructor(private page: Page) {}
+  readonly page: Page;
+  readonly confirmationMessage: Locator;
+  constructor( page: Page) {
+    this.page = page;
+    this.confirmationMessage = page.locator(".complete-header")
+  }
 
   async verifyConfirmation() {
-    const text = await this.page.textContent('.complete-header');
+    const text = await this.confirmationMessage.textContent();
     expect(text).toContain('Thank you for your order');
   }
 }

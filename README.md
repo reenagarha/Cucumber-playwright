@@ -116,9 +116,9 @@ Feature: Login functionality
 After running `npm run report`, an HTML report will be generated (typically as `report.html`).
 You can customize it via `generate-report.ts`.
 
-![Sample Report](./assets/sample-report.png)
+![Sample Report](./reports/cucumber-report.html)
 
-> *Include a screenshot if you're using this in a presentation or portfolio.*
+
 
 ---
 

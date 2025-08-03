@@ -1,8 +1,6 @@
-Here’s your **interview-ready `README.md`**, fully enhanced and presentation-polished:
+
 
 ---
-
-### 📄 `README.md`
 
 # E2E Automation Framework
 
@@ -25,7 +23,7 @@ It follows a Behavior-Driven Development (BDD) approach, enabling collaboration 
 
 ```
 
-eon-next/
+saudemo/
 ├── features/
 │   ├── step\_definitions/
 │   ├── support/
@@ -56,8 +54,8 @@ eon-next/
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd eon-next
+git clone https://www.github.com/reenagarha/Cucumber-playwright
+
 ````
 
 ### 2. Install Dependencies
@@ -118,9 +116,9 @@ Feature: Login functionality
 After running `npm run report`, an HTML report will be generated (typically as `report.html`).
 You can customize it via `generate-report.ts`.
 
-![Sample Report](./assets/sample-report.png)
+![Sample Report](./reports/cucumber-report.html)
 
-> *Include a screenshot if you're using this in a presentation or portfolio.*
+
 
 ---
 
@@ -147,22 +145,10 @@ This framework is CI-ready and can be integrated with:
 
 ---
 
-## 📜 License
 
-ISC
-
----
 
 ## 👤 Author
 
-*Your Name Here*
-*Contact: [your.email@example.com](mailto:your.email@example.com)*
-
----
-
-```
-
----
-
-Let me know if you want help creating a **sample step definition**, a **report generator script**, or a **GitHub Actions CI file** to go with this!
-```
+*Reena Garha*
+-------
+*Contact: [reenagarha@gmail.com](mailto:reenagarha@gmail.com)*

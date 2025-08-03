@@ -116,7 +116,7 @@ Feature: Login functionality
 After running `npm run report`, an HTML report will be generated (typically as `report.html`).
 You can customize it via `generate-report.ts`.
 
-![Sample Report](./reports/cucumber-report.html)
+![Sample Report](./screenshots/saucedemo-e2e-report.png)
 
 
 

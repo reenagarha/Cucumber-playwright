@@ -1,5 +1,8 @@
-Feature: Purchase products from Sauce Demo
-
+@regression
+Feature:Login and Purchase from Sauce Demo
+  As a user
+  I want to login and purchase products from Sauce Demo
+  @purchase
   Scenario Outline: Log in and complete purchase of two products
     Given I open the Sauce Demo site
     When I login with username "<username>" and password "<password>"

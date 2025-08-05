@@ -23,18 +23,31 @@ It follows a Behavior-Driven Development (BDD) approach, enabling collaboration 
 
 ```
 
-saudemo/
-├── features/
-│   ├── step\_definitions/
-│   ├── support/
-│   └── login.feature
-├── tests/
-│   └── pages/
-│       └── loginPage.ts
-├── generate-report.ts
-├── tsconfig.json
-├── package.json
-└── README.md
+saucedemo/  
+├── .git/  
+│   └── COMMIT_EDITMSG  
+├── features/  
+│   ├── fixtures/  
+│   ├── hooks/  
+│   ├── pages/  
+│   ├── step_definitions/  
+│   ├── support/  
+│   ├── config.ts  
+│   ├── login.feature  
+│   └── PurchaseItems.feature  
+├── node_modules/  
+├── reports/  
+├── screenshots/  
+├── tests/  
+├── tests-examples/  
+├── .gitignore  
+├── cucumber.json  
+├── generate-report.ts  
+├── package-lock.json  
+├── package.json  
+├── playwright.config.ts  
+├── README.md  
+└── tsconfig.json
 
 ````
 

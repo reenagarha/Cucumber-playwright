@@ -12,9 +12,11 @@ After(async function (this: CustomWorld, scenario) {
     const screenshotPath = path.resolve(`screenshots/${Date.now()}.png`);
     fs.mkdirSync(path.dirname(screenshotPath), { recursive: true });
     await this.page.screenshot({ path: screenshotPath });
+
     const buffer = fs.readFileSync(screenshotPath);
     await this.attach(buffer, 'image/png');
   }
+
   await this.closeBrowser();
 });
    

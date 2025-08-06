@@ -15,9 +15,7 @@ When('I enter valid username {string} and password {string}',
 });
 
 Then('I am logged in successfully', async function (this: CustomWorld) {
-
-  
-  await expect(this.page).toHaveURL(/.*inventory/);
+    await expect(this.page).toHaveURL(/.*inventory/);
 });
 
 // Close the browser after each scenario

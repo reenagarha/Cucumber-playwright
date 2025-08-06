@@ -52,7 +52,3 @@ Then('I should see a confirmation message', async function (this: CustomWorld) {
   const confirmationPage = new ConfirmationPage(this.page);
   await confirmationPage.verifyConfirmation();
 });
-
-When('I fill in my information with first name {string},last name {string} and zip\&#x2F;postal code {string}', (s: string, s2: string, s3: string) => {
-  // Write code here that turns the phrase above into concrete actions
-})

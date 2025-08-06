@@ -5,8 +5,6 @@ import path from 'path';
 import { CustomWorld } from '../support/world'
 
 Before(async function (this: CustomWorld) {
-  
-  console.log('launchBrowser is', this.launchBrowser);
   await this.launchBrowser();
 });
 After(async function (this: CustomWorld, scenario) {
@@ -14,11 +12,9 @@ After(async function (this: CustomWorld, scenario) {
     const screenshotPath = path.resolve(`screenshots/${Date.now()}.png`);
     fs.mkdirSync(path.dirname(screenshotPath), { recursive: true });
     await this.page.screenshot({ path: screenshotPath });
-
     const buffer = fs.readFileSync(screenshotPath);
     await this.attach(buffer, 'image/png');
   }
-
   await this.closeBrowser();
 });
    

@@ -51,4 +51,4 @@ When('I complete the purchase', async function (this: CustomWorld) {
 Then('I should see a confirmation message', async function (this: CustomWorld) {
   const confirmationPage = new ConfirmationPage(this.page);
   await confirmationPage.verifyConfirmation();
-});
+})

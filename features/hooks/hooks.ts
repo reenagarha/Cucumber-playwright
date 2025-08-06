@@ -17,6 +17,6 @@ After(async function (this: CustomWorld, scenario) {
     await this.attach(buffer, 'image/png');
   }
 
-  await this.closeBrowser();
+ await this.closeBrowser();
 });
    

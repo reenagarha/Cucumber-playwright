@@ -1,6 +1,6 @@
 
 
----
+
 
 # E2E Automation Framework
 
@@ -23,18 +23,31 @@ It follows a Behavior-Driven Development (BDD) approach, enabling collaboration 
 
 ```
 
-saudemo/
-├── features/
-│   ├── step\_definitions/
-│   ├── support/
-│   └── login.feature
-├── tests/
-│   └── pages/
-│       └── loginPage.ts
-├── generate-report.ts
-├── tsconfig.json
-├── package.json
-└── README.md
+saucedemo/  
+├── .git/  
+│   └── COMMIT_EDITMSG  
+├── features/  
+│   ├── fixtures/  
+│   ├── hooks/  
+│   ├── pages/  
+│   ├── step_definitions/  
+│   ├── support/  
+│   ├── config.ts  
+│   ├── login.feature  
+│   └── PurchaseItems.feature  
+├── node_modules/  
+├── reports/  
+├── screenshots/  
+├── tests/  
+├── tests-examples/  
+├── .gitignore  
+├── cucumber.json  
+├── generate-report.ts  
+├── package-lock.json  
+├── package.json  
+├── playwright.config.ts  
+├── README.md  
+└── tsconfig.json
 
 ````
 
@@ -57,21 +70,32 @@ saudemo/
 git clone https://www.github.com/reenagarha/Cucumber-playwright
 
 ````
+### 2. Pre requisites
+```bash
+Node.js (v16 or above)
+npm (comes with Node.js)
 
-### 2. Install Dependencies
+````
+### 3. Install Dependencies
 
 ```bash
-npm install
+# Core dependencies
+npm install -D @playwright/test @cucumber/cucumber typescript ts-node
+
+# For HTML reporting (optional)
+npm install -D cucumber-html-reporter
+
+
 ```
 
 ---
 
-## 🧪 Running Tests
+##  Running Tests
 
 ### Run All Feature Tests
 
 ```bash
-npm test
+npm run test
 ```
 
 > Runs Cucumber tests from `features/*.feature`
@@ -98,9 +122,20 @@ npm run test:report
 
 ---
 
+ ### Optional :  Run Tagged test
+``` bash
+
+npx cucumber-js --tags "@smoke" 
+
+```
+> Runs tests tagged as smoke
+
+---
+
 ## ✅ Sample Feature File
 
-```gherkin
+```bash
+@smoke
 Feature: Login functionality
 
   Scenario: Valid login
@@ -135,15 +170,9 @@ This framework is CI-ready and can be integrated with:
 
 ---
 
-## 🔮 Future Improvements
 
-* 🔹 Parallel test execution
-* 🔹 Cloud-based cross-browser testing (e.g., BrowserStack, Sauce Labs)
-* 🔹 Test data externalization (CSV/JSON)
-* 🔹 Slack/email alerts on failed test runs
-* 🔹 Dockerize the framework for consistent environments
 
----
+
 
 
 

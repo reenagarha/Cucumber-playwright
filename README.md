@@ -1,7 +1,3 @@
-
-
-
-
 # E2E Automation Framework
 
 This is a scalable and maintainable end-to-end (E2E) testing framework using **Cucumber**, **Playwright**, and **TypeScript** to automate user journeys on [saucedemo.com](https://www.saucedemo.com), a demo e-commerce platform.
@@ -177,7 +173,6 @@ This framework is CI-ready and can be integrated with:
 
 
 ## 👤 Author
-
 *Reena Garha*
--------
+
 *Contact: [reenagarha@gmail.com](mailto:reenagarha@gmail.com)*
